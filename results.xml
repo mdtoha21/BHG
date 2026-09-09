@@ -1,0 +1,6 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="6.684437">
+<testsuite name="bhg.spec.js" timestamp="2026-09-09T19:21:32.616Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.164" errors="0">
+<testcase name="BHG" classname="bhg.spec.js" time="4.164">
+</testcase>
+</testsuite>
+</testsuites>
