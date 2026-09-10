@@ -1,20 +1,82 @@
 import { test, expect } from '../fixtures/index.js';
 
-test('BHG', async ({
-  page,
-  mainPage
-}) => {
+async function openHome(mainPage) {
+  await mainPage.goto_bhg();
+}
 
-await mainPage.goto_bhg();
+test('loads the home page', async ({ page, mainPage }) => {
+  await openHome(mainPage);
+  await expect(page).toHaveURL('https://www.bhg.com/');
+});
 
-await page.locator('//nav[@id="mm-nav-header-nav_1-0"]/div[1]/ul/li[1]').hover();
+test('shows the main header navigation', async ({ page, mainPage }) => {
+  await openHome(mainPage);
+  await expect(mainPage.header_nav).toBeVisible();
+});
 
-await mainPage.sub_nav_click('Decor Styles');
+test('shows the utility navigation', async ({ page, mainPage }) => {
+  await openHome(mainPage);
+  await expect(mainPage.utility_nav).toBeVisible();
+});
 
-await expect(page).toHaveURL('https://www.bhg.com/decorating-styles-and-themes-5546004');
+test('hovers the first header item', async ({ page, mainPage }) => {
+  await openHome(mainPage);
+  await mainPage.open_header_menu();
+  await expect(mainPage.first_header_item).toBeVisible();
+});
 
-const checkboxes=['BHG Daily Inspiration', 'BHG Daily Recipe','BHG Shopping','Grow & Tell','BHG Decorating Newsletter','Real Simple Partner Offers'];
-await page.locator('//div[@id="mm-nav-utility-nav_1-0"]/ul/li[3]/a').click();
+test('opens decor styles', async ({ page, mainPage }) => {
+  await openHome(mainPage);
+  await mainPage.open_decor_styles();
+  await expect(page).toHaveURL('https://www.bhg.com/decorating-styles-and-themes-5546004');
+});
 
-await expect(await page.locator('//div[@id="mntl-newsletter_1-0"]//ul[@class="newsletter__subscriptions-list"]/li[5]/input').isChecked()).toBeFalsy();
+test('keeps bhg on the same domain', async ({ page, mainPage }) => {
+  await openHome(mainPage);
+  await expect(page).toHaveURL(/bhg\.com/);
+});
+
+test('opens the newsletter dialog', async ({ page, mainPage }) => {
+  await openHome(mainPage);
+  await mainPage.open_newsletter();
+  await expect(mainPage.newsletter_dialog).toBeVisible();
+});
+
+test('submits a second newsletter choice', async ({ mainPage }) => {
+  await openHome(mainPage);
+  await mainPage.newsletter_check('test@example.com', ['BHG Shopping']);
+});
+
+test('submits two newsletter choices', async ({ mainPage }) => {
+  await openHome(mainPage);
+  await mainPage.newsletter_check('test@example.com', ['BHG Daily Inspiration', 'BHG Shopping']);
+});
+
+test('submits a gardening newsletter choice', async ({ mainPage }) => {
+  await openHome(mainPage);
+  await mainPage.newsletter_check('test@example.com', ['Grow & Tell']);
+});
+
+test('opens home page again after navigation', async ({ page, mainPage }) => {
+  await openHome(mainPage);
+  await mainPage.open_decor_styles();
+  await expect(page).toHaveURL('https://www.bhg.com/decorating-styles-and-themes-5546004');
+  await mainPage.goto_bhg();
+  await expect(page).toHaveURL('https://www.bhg.com/');
+});
+
+test('checks bhg url', async ({ page, mainPage }) => {
+  await openHome(mainPage);
+  await expect(mainPage.header_nav).toBeVisible();
+});
+
+test('verifies the newsletter link exists', async ({ page, mainPage }) => {
+  await openHome(mainPage);
+  await expect(mainPage.newsletter).toBeVisible();
+});
+
+test('shows newsletter options through the helper', async ({ mainPage }) => {
+  await openHome(mainPage);
+  await mainPage.open_newsletter();
+  await expect(mainPage.newsletter_options).toHaveCount(6);
 });

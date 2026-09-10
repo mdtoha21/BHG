@@ -1,6 +1,217 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="6.684437">
-<testsuite name="bhg.spec.js" timestamp="2026-09-09T19:21:32.616Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.164" errors="0">
-<testcase name="BHG" classname="bhg.spec.js" time="4.164">
+<testsuites id="" name="" tests="14" failures="0" skipped="0" errors="6" time="99.56733600000001">
+<testsuite name="bhg.spec.js" timestamp="2026-09-10T17:32:32.682Z" hostname="chromium" tests="14" failures="0" skipped="0" time="358.082" errors="6">
+<testcase name="loads the home page" classname="bhg.spec.js" time="4.566">
+</testcase>
+<testcase name="shows the main header navigation" classname="bhg.spec.js" time="34.946">
+</testcase>
+<testcase name="shows the utility navigation" classname="bhg.spec.js" time="3.257">
+</testcase>
+<testcase name="hovers the first header item" classname="bhg.spec.js" time="3.475">
+</testcase>
+<testcase name="opens decor styles" classname="bhg.spec.js" time="47.708">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/bhg-opens-decor-styles-chromium/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › bhg.spec.js:28:5 › opens decor styles ───────────────────────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: elementHandle.click: Test timeout of 30000ms exceeded.
+
+       at ../pages/bhgHP.js:47
+
+      45 |
+      46 |         if(text.trim()==name){
+    > 47 |             await link.click();
+         |                        ^
+      48 |             break;
+      49 |         }
+      50 |     }
+        at HomePage.sub_nav_click (/Users/mdtoha/Desktop/BHG/pages/bhgHP.js:47:24)
+        at /Users/mdtoha/Desktop/BHG/tests/bhg.spec.js:31:3
+
+    Error Context: ../test-results/bhg-opens-decor-styles-chromium/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="keeps bhg on the same domain" classname="bhg.spec.js" time="2.819">
+</testcase>
+<testcase name="opens the newsletter dialog" classname="bhg.spec.js" time="47.214">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/bhg-opens-the-newsletter-dialog-chromium/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › bhg.spec.js:40:5 › opens the newsletter dialog ──────────────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.uncheck: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('//div[@id="mntl-newsletter_1-0"]//ul[@class="newsletter__subscriptions-list"]/li/input').first()
+
+
+       at ../pages/bhgHP.js:67
+
+      65 |         if(await box.isChecked()){
+      66 |
+    > 67 |             await box.uncheck({ force: true });
+         |                       ^
+      68 |             
+      69 |         }
+      70 |
+        at HomePage.newsletter_check (/Users/mdtoha/Desktop/BHG/pages/bhgHP.js:67:23)
+        at /Users/mdtoha/Desktop/BHG/tests/bhg.spec.js:42:3
+
+    Error Context: ../test-results/bhg-opens-the-newsletter-dialog-chromium/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="submits a second newsletter choice" classname="bhg.spec.js" time="44.334">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/bhg-submits-a-second-newsletter-choice-chromium/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › bhg.spec.js:45:5 › submits a second newsletter choice ───────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('//div[@id="mm-nav-utility-nav_1-0"]/ul/li[3]/a')
+        - locator resolved to <a href="#" rel="nocaes" role="button" data-tracking-container="true" data-tracking-target-url="null" data-tracking-subtype="Signup CTA" data-tracking-metadata-auth="false" data-tracking-category="Newsletters" data-tracking-metadata-location="header" id="mntl-newsletter-dialog--header-link_1-0" data-a11y-dialog-show="newsletter-dialog-header" class="mntl-newsletter-dialog--header-link dialog-link mntl-text-link ">…</a>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+
+
+       at ../pages/bhgHP.js:56
+
+      54 |   async newsletter_check(email,checkboxes){
+      55 |
+    > 56 |     await this.newsletter.click();
+         |                           ^
+      57 |     await expect(this.page.getByRole('dialog',{name:'Newsletter Sign Up'})).toBeVisible();
+      58 |     await this.newsletter_email.fill(email);
+      59 |
+        at HomePage.newsletter_check (/Users/mdtoha/Desktop/BHG/pages/bhgHP.js:56:27)
+        at /Users/mdtoha/Desktop/BHG/tests/bhg.spec.js:47:18
+
+    Error Context: ../test-results/bhg-submits-a-second-newsletter-choice-chromium/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="submits two newsletter choices" classname="bhg.spec.js" time="52.43">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/bhg-submits-two-newsletter-choices-chromium/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › bhg.spec.js:50:5 › submits two newsletter choices ───────────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.uncheck: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('//div[@id="mntl-newsletter_1-0"]//ul[@class="newsletter__subscriptions-list"]/li/input').first()
+        - locator resolved to <input checked type="checkbox" value="15300002" name="newsletterObjectIds" class="newsletter__checkbox" id="mntl-newsletter_1-2-15300002" data-title="BHG Daily Inspiration"/>
+
+
+       at ../pages/bhgHP.js:67
+
+      65 |         if(await box.isChecked()){
+      66 |
+    > 67 |             await box.uncheck({ force: true });
+         |                       ^
+      68 |             
+      69 |         }
+      70 |
+        at HomePage.newsletter_check (/Users/mdtoha/Desktop/BHG/pages/bhgHP.js:67:23)
+        at /Users/mdtoha/Desktop/BHG/tests/bhg.spec.js:52:3
+
+    Error Context: ../test-results/bhg-submits-two-newsletter-choices-chromium/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="submits a gardening newsletter choice" classname="bhg.spec.js" time="36.711">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/bhg-submits-a-gardening-newsletter-choice-chromium/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › bhg.spec.js:55:5 › submits a gardening newsletter choice ────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('//div[@id="mm-nav-utility-nav_1-0"]/ul/li[3]/a')
+        - locator resolved to <a href="#" rel="nocaes" role="button" data-tracking-container="true" data-tracking-target-url="null" data-tracking-subtype="Signup CTA" data-tracking-metadata-auth="false" data-tracking-category="Newsletters" data-tracking-metadata-location="header" id="mntl-newsletter-dialog--header-link_1-0" data-a11y-dialog-show="newsletter-dialog-header" class="mntl-newsletter-dialog--header-link dialog-link mntl-text-link ">…</a>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+
+
+       at ../pages/bhgHP.js:56
+
+      54 |   async newsletter_check(email,checkboxes){
+      55 |
+    > 56 |     await this.newsletter.click();
+         |                           ^
+      57 |     await expect(this.page.getByRole('dialog',{name:'Newsletter Sign Up'})).toBeVisible();
+      58 |     await this.newsletter_email.fill(email);
+      59 |
+        at HomePage.newsletter_check (/Users/mdtoha/Desktop/BHG/pages/bhgHP.js:56:27)
+        at /Users/mdtoha/Desktop/BHG/tests/bhg.spec.js:57:18
+
+    Error Context: ../test-results/bhg-submits-a-gardening-newsletter-choice-chromium/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="opens home page again after navigation" classname="bhg.spec.js" time="38.533">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/bhg-opens-home-page-again-after-navigation-chromium/error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › bhg.spec.js:60:5 › opens home page again after navigation ───────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected: "https://www.bhg.com/decorating-styles-and-themes-5546004"
+    Received: ""
+
+
+      62 |   await mainPage.first_header_item.hover();
+      63 |   await mainPage.sub_nav_click('Decor Styles');
+    > 64 |   await expect(page).toHaveURL('https://www.bhg.com/decorating-styles-and-themes-5546004');
+         |                      ^
+      65 |   await mainPage.goto_bhg();
+      66 |   await expect(page).toHaveURL('https://www.bhg.com/');
+      67 | });
+        at /Users/mdtoha/Desktop/BHG/tests/bhg.spec.js:64:22
+
+    Error Context: ../test-results/bhg-opens-home-page-again-after-navigation-chromium/error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="checks bhg url" classname="bhg.spec.js" time="36.591">
+</testcase>
+<testcase name="verifies the newsletter link exists" classname="bhg.spec.js" time="3.416">
+</testcase>
+<testcase name="shows newsletter options through the helper" classname="bhg.spec.js" time="2.082">
 </testcase>
 </testsuite>
 </testsuites>

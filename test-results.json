@@ -19,7 +19,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 4
     },
     "preserveOutput": "always",
     "projects": [
@@ -28,7 +28,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 4
         },
         "id": "chromium",
         "name": "chromium",
@@ -85,7 +85,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "BHG",
+          "title": "loads the home page",
           "ok": true,
           "tags": [],
           "tests": [
@@ -100,12 +100,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4164,
+                  "duration": 4566,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-09T19:21:32.821Z",
+                  "startTime": "2026-09-10T17:32:33.012Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -113,9 +113,583 @@
               "status": "expected"
             }
           ],
-          "id": "325d32e270bf6e85a39d-0c0744b7e47a78bb4fb7",
+          "id": "325d32e270bf6e85a39d-f4c9bc08c65e3d0ec114",
           "file": "bhg.spec.js",
-          "line": 3,
+          "line": 7,
+          "column": 5
+        },
+        {
+          "title": "shows the main header navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 34946,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-10T17:32:33.015Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "325d32e270bf6e85a39d-7eb5112158309bbf09ee",
+          "file": "bhg.spec.js",
+          "line": 12,
+          "column": 5
+        },
+        {
+          "title": "shows the utility navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 3257,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-10T17:32:33.020Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "325d32e270bf6e85a39d-74de9d974b034a79a1c3",
+          "file": "bhg.spec.js",
+          "line": 17,
+          "column": 5
+        },
+        {
+          "title": "hovers the first header item",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 3475,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-10T17:32:33.014Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "325d32e270bf6e85a39d-d5957d8007a19e267757",
+          "file": "bhg.spec.js",
+          "line": 22,
+          "column": 5
+        },
+        {
+          "title": "opens decor styles",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "timedOut",
+                  "duration": 47708,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/mdtoha/Desktop/BHG/pages/bhgHP.js",
+                        "column": 24,
+                        "line": 47
+                      },
+                      "message": "Error: elementHandle.click: Test timeout of 30000ms exceeded.\n\n\u001b[90m   at \u001b[39m../pages/bhgHP.js:47\n\n\u001b[0m \u001b[90m 45 |\u001b[39m\n \u001b[90m 46 |\u001b[39m         \u001b[36mif\u001b[39m(text\u001b[33m.\u001b[39mtrim()\u001b[33m==\u001b[39mname){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 47 |\u001b[39m             \u001b[36mawait\u001b[39m link\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 48 |\u001b[39m             \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 49 |\u001b[39m         }\n \u001b[90m 50 |\u001b[39m     }\u001b[0m\n\u001b[2m    at HomePage.sub_nav_click (/Users/mdtoha/Desktop/BHG/pages/bhgHP.js:47:24)\u001b[22m\n\u001b[2m    at /Users/mdtoha/Desktop/BHG/tests/bhg.spec.js:31:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-10T17:32:38.841Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/mdtoha/Desktop/BHG/test-results/bhg-opens-decor-styles-chromium/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "325d32e270bf6e85a39d-7312cb948beecb3dcc38",
+          "file": "bhg.spec.js",
+          "line": 28,
+          "column": 5
+        },
+        {
+          "title": "keeps bhg on the same domain",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 2819,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-10T17:32:38.851Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "325d32e270bf6e85a39d-d57baffa3d6f3de07552",
+          "file": "bhg.spec.js",
+          "line": 35,
+          "column": 5
+        },
+        {
+          "title": "opens the newsletter dialog",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 47214,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/mdtoha/Desktop/BHG/pages/bhgHP.js",
+                        "column": 23,
+                        "line": 67
+                      },
+                      "message": "Error: locator.uncheck: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//div[@id=\"mntl-newsletter_1-0\"]//ul[@class=\"newsletter__subscriptions-list\"]/li/input').first()\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pages/bhgHP.js:67\n\n\u001b[0m \u001b[90m 65 |\u001b[39m         \u001b[36mif\u001b[39m(\u001b[36mawait\u001b[39m box\u001b[33m.\u001b[39misChecked()){\n \u001b[90m 66 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 67 |\u001b[39m             \u001b[36mawait\u001b[39m box\u001b[33m.\u001b[39muncheck({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 68 |\u001b[39m             \n \u001b[90m 69 |\u001b[39m         }\n \u001b[90m 70 |\u001b[39m\u001b[0m\n\u001b[2m    at HomePage.newsletter_check (/Users/mdtoha/Desktop/BHG/pages/bhgHP.js:67:23)\u001b[22m\n\u001b[2m    at /Users/mdtoha/Desktop/BHG/tests/bhg.spec.js:42:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-10T17:32:39.517Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/mdtoha/Desktop/BHG/test-results/bhg-opens-the-newsletter-dialog-chromium/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "325d32e270bf6e85a39d-9c5b284d7611b13f9d0e",
+          "file": "bhg.spec.js",
+          "line": 40,
+          "column": 5
+        },
+        {
+          "title": "submits a second newsletter choice",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "timedOut",
+                  "duration": 44334,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/mdtoha/Desktop/BHG/pages/bhgHP.js",
+                        "column": 27,
+                        "line": 56
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//div[@id=\"mm-nav-utility-nav_1-0\"]/ul/li[3]/a')\u001b[22m\n\u001b[2m    - locator resolved to <a href=\"#\" rel=\"nocaes\" role=\"button\" data-tracking-container=\"true\" data-tracking-target-url=\"null\" data-tracking-subtype=\"Signup CTA\" data-tracking-metadata-auth=\"false\" data-tracking-category=\"Newsletters\" data-tracking-metadata-location=\"header\" id=\"mntl-newsletter-dialog--header-link_1-0\" data-a11y-dialog-show=\"newsletter-dialog-header\" class=\"mntl-newsletter-dialog--header-link dialog-link mntl-text-link \">…</a>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pages/bhgHP.js:56\n\n\u001b[0m \u001b[90m 54 |\u001b[39m   \u001b[36masync\u001b[39m newsletter_check(email\u001b[33m,\u001b[39mcheckboxes){\n \u001b[90m 55 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 56 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mnewsletter\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 57 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Newsletter Sign Up'\u001b[39m}))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 58 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mnewsletter_email\u001b[33m.\u001b[39mfill(email)\u001b[33m;\u001b[39m\n \u001b[90m 59 |\u001b[39m\u001b[0m\n\u001b[2m    at HomePage.newsletter_check (/Users/mdtoha/Desktop/BHG/pages/bhgHP.js:56:27)\u001b[22m\n\u001b[2m    at /Users/mdtoha/Desktop/BHG/tests/bhg.spec.js:47:18\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-10T17:32:41.729Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/mdtoha/Desktop/BHG/test-results/bhg-submits-a-second-newsletter-choice-chromium/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "325d32e270bf6e85a39d-7a9dc59c163fc92b1fdc",
+          "file": "bhg.spec.js",
+          "line": 45,
+          "column": 5
+        },
+        {
+          "title": "submits two newsletter choices",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "timedOut",
+                  "duration": 52430,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/mdtoha/Desktop/BHG/pages/bhgHP.js",
+                        "column": 23,
+                        "line": 67
+                      },
+                      "message": "Error: locator.uncheck: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//div[@id=\"mntl-newsletter_1-0\"]//ul[@class=\"newsletter__subscriptions-list\"]/li/input').first()\u001b[22m\n\u001b[2m    - locator resolved to <input checked type=\"checkbox\" value=\"15300002\" name=\"newsletterObjectIds\" class=\"newsletter__checkbox\" id=\"mntl-newsletter_1-2-15300002\" data-title=\"BHG Daily Inspiration\"/>\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pages/bhgHP.js:67\n\n\u001b[0m \u001b[90m 65 |\u001b[39m         \u001b[36mif\u001b[39m(\u001b[36mawait\u001b[39m box\u001b[33m.\u001b[39misChecked()){\n \u001b[90m 66 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 67 |\u001b[39m             \u001b[36mawait\u001b[39m box\u001b[33m.\u001b[39muncheck({ force\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 68 |\u001b[39m             \n \u001b[90m 69 |\u001b[39m         }\n \u001b[90m 70 |\u001b[39m\u001b[0m\n\u001b[2m    at HomePage.newsletter_check (/Users/mdtoha/Desktop/BHG/pages/bhgHP.js:67:23)\u001b[22m\n\u001b[2m    at /Users/mdtoha/Desktop/BHG/tests/bhg.spec.js:52:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-10T17:33:13.288Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/mdtoha/Desktop/BHG/test-results/bhg-submits-two-newsletter-choices-chromium/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "325d32e270bf6e85a39d-a12293e0e72937b711ca",
+          "file": "bhg.spec.js",
+          "line": 50,
+          "column": 5
+        },
+        {
+          "title": "submits a gardening newsletter choice",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 2,
+                  "status": "timedOut",
+                  "duration": 36711,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/mdtoha/Desktop/BHG/pages/bhgHP.js",
+                        "column": 27,
+                        "line": 56
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//div[@id=\"mm-nav-utility-nav_1-0\"]/ul/li[3]/a')\u001b[22m\n\u001b[2m    - locator resolved to <a href=\"#\" rel=\"nocaes\" role=\"button\" data-tracking-container=\"true\" data-tracking-target-url=\"null\" data-tracking-subtype=\"Signup CTA\" data-tracking-metadata-auth=\"false\" data-tracking-category=\"Newsletters\" data-tracking-metadata-location=\"header\" id=\"mntl-newsletter-dialog--header-link_1-0\" data-a11y-dialog-show=\"newsletter-dialog-header\" class=\"mntl-newsletter-dialog--header-link dialog-link mntl-text-link \">…</a>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pages/bhgHP.js:56\n\n\u001b[0m \u001b[90m 54 |\u001b[39m   \u001b[36masync\u001b[39m newsletter_check(email\u001b[33m,\u001b[39mcheckboxes){\n \u001b[90m 55 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 56 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mnewsletter\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 57 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'dialog'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Newsletter Sign Up'\u001b[39m}))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 58 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mnewsletter_email\u001b[33m.\u001b[39mfill(email)\u001b[33m;\u001b[39m\n \u001b[90m 59 |\u001b[39m\u001b[0m\n\u001b[2m    at HomePage.newsletter_check (/Users/mdtoha/Desktop/BHG/pages/bhgHP.js:56:27)\u001b[22m\n\u001b[2m    at /Users/mdtoha/Desktop/BHG/tests/bhg.spec.js:57:18\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-10T17:33:28.590Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/mdtoha/Desktop/BHG/test-results/bhg-submits-a-gardening-newsletter-choice-chromium/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "325d32e270bf6e85a39d-eed9ce0c55f506b3e25f",
+          "file": "bhg.spec.js",
+          "line": 55,
+          "column": 5
+        },
+        {
+          "title": "opens home page again after navigation",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 3,
+                  "status": "timedOut",
+                  "duration": 38533,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/mdtoha/Desktop/BHG/tests/bhg.spec.js",
+                        "column": 22,
+                        "line": 64
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"https://www.bhg.com/decorating-styles-and-themes-5546004\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\n\n\n\u001b[0m \u001b[90m 62 |\u001b[39m   \u001b[36mawait\u001b[39m mainPage\u001b[33m.\u001b[39mfirst_header_item\u001b[33m.\u001b[39mhover()\u001b[33m;\u001b[39m\n \u001b[90m 63 |\u001b[39m   \u001b[36mawait\u001b[39m mainPage\u001b[33m.\u001b[39msub_nav_click(\u001b[32m'Decor Styles'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 64 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m'https://www.bhg.com/decorating-styles-and-themes-5546004'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 65 |\u001b[39m   \u001b[36mawait\u001b[39m mainPage\u001b[33m.\u001b[39mgoto_bhg()\u001b[33m;\u001b[39m\n \u001b[90m 66 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m'https://www.bhg.com/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 67 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/mdtoha/Desktop/BHG/tests/bhg.spec.js:64:22\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-10T17:33:28.590Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/mdtoha/Desktop/BHG/test-results/bhg-opens-home-page-again-after-navigation-chromium/error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "325d32e270bf6e85a39d-7167639448c9651ca05b",
+          "file": "bhg.spec.js",
+          "line": 60,
+          "column": 5
+        },
+        {
+          "title": "checks bhg url",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 36591,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-10T17:33:28.588Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "325d32e270bf6e85a39d-2060ac7acbdb8fb16f97",
+          "file": "bhg.spec.js",
+          "line": 69,
+          "column": 5
+        },
+        {
+          "title": "verifies the newsletter link exists",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3416,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-10T17:34:06.576Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "325d32e270bf6e85a39d-acf8be7abfd6af30c4be",
+          "file": "bhg.spec.js",
+          "line": 74,
+          "column": 5
+        },
+        {
+          "title": "shows newsletter options through the helper",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 2082,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-10T17:34:09.144Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "325d32e270bf6e85a39d-28ae11f8cd64551b2ec3",
+          "file": "bhg.spec.js",
+          "line": 79,
           "column": 5
         }
       ]
@@ -123,11 +697,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-09-09T19:21:32.603Z",
-    "duration": 6684.437,
-    "expected": 1,
+    "startTime": "2026-09-10T17:32:32.668Z",
+    "duration": 99567.33600000001,
+    "expected": 8,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 6,
     "flaky": 0
   }
 }
